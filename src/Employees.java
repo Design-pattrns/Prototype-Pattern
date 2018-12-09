@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-
 public class Employees implements Cloneable{
     List<String> emp;
     Employees() {
@@ -18,14 +17,12 @@ public class Employees implements Cloneable{
     List<String> getEmpList(){
         return emp;
     }
-
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    protected Object clone()throws CloneNotSupportedException {
         List<String> temp = new ArrayList<>();
         for (String s: this.getEmpList()){
             temp.add(s);
         }
-
         return new Employees(temp);
     }
 }
